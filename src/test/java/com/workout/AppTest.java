@@ -40,7 +40,7 @@ public void TestRun()
 	driver.findElement(By.id("userName")).sendKeys("bsp@demo.com");
 	driver.findElement(By.id("userPw")).sendKeys("bsp");
 	driver.findElement(By.id("login_btn1")).click();
-	System.out.println(driver.getTitle());
+	System.out.println(driver.getCurrentUrl());
 	System.out.println("h ha ha");
 	driver.quit();
 }
