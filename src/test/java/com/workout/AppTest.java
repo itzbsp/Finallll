@@ -36,11 +36,12 @@ public void TestRun()
 	System.setProperty("webdriver.chrome.driver","C:/Users/BSP/Desktop/cd.exe");
 	driver=new ChromeDriver();
 	driver.get("http://localhost:6161/WorkOutFinal/");
-	//System.out.println(driver.getTitle());
+	System.out.println(driver.getTitle());
 	driver.findElement(By.id("userName")).sendKeys("bsp@demo.com");
 	driver.findElement(By.id("userPw")).sendKeys("bsp");
 	driver.findElement(By.id("login_btn1")).click();
-	//System.out.println(driver.getTitle());
+	System.out.println(driver.getTitle());
+	System.out.println("h ha ha");
 	driver.quit();
 }
 }
