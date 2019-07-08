@@ -33,8 +33,8 @@ public void TestRun()
 {
 	FirefoxBinary firefoxBinary = new FirefoxBinary();
 	//firefoxBinary.addCommandLineOptions("--headless");
-	System.setProperty("webdriver.gecko.driver","C:/Users/BSP/Desktop/geckodriver");
-	driver=new FirefoxDriver();
+	System.setProperty("webdriver.chrome.driver","C:/Users/BSP/Desktop/cd.exe");
+	driver=new ChromeDriver();
 	driver.get("http://localhost:6161/WorkOutFinal/");
 	System.out.println(driver.getTitle());
 	driver.findElement(By.id("userName")).sendKeys("bsp@demo.com");
