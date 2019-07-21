@@ -4,11 +4,21 @@ node{
     }
     stage('Compile-Package'){
         def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
-        sh "${mvnHome}/bin/mvn package"
+        sh "${mvnHome}/bin/mvn compile"
     }
-    stage('Running Sonar Scanner'){
+    
+    stage('Test-Package'){
+        def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
+        sh "${mvnHome}/bin/mvn test"
+    }
+    
+    stage('Compile-Package'){
+        def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
+        sh "${mvnHome}/bin/mvn deploy"
+    }
+    /*stage('Running Sonar Scanner'){
         def sonarqubeScannerHome = tool name: 'scan', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         sh "${sonarqubeScannerHome} -e -Dsonar.host.url=..."
-    }
+    }*/
    
 }
