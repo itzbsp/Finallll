@@ -1,32 +1,9 @@
-pipeline {
-    agent any
-
-    stages {
-        stage ('Compile Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_6_1') {
-                    sh 'mvn clean compile'
-                }
-            }
-        }
-
-        stage ('Testing Stage') {
-
-            steps {
-                withMaven(maven : 'maven_3_6_1') {
-                    sh 'mvn test'
-                }
-            }
-        }
-
-
-        stage ('Deployment Stage') {
-            steps {
-                withMaven(maven : 'maven_3_6_1') {
-                    sh 'mvn deploy'
-                }
-            }
-        }
+node{
+    stage('SCM CheckOut From GIT'){
+        git 'https://github.com/itzbsp/Finallll'
+    }
+    stage('Compile-Package'){
+        def mvnHome = tool name: 'maven_3_6_1', type: 'maven'
+        sh "${mvnHome}/bin/mvn "
     }
 }
