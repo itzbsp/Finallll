@@ -9,4 +9,6 @@ node{
     stage('Running Sonar Scanner'){
         def sonarqubeScannerHome = tool name: 'scan', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
         sh "${sonarqubeScannerHome} -e -Dsonar.host.url=..."
+    }
+   
 }
