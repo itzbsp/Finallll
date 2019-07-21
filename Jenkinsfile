@@ -12,9 +12,9 @@ node{
         sh "${mvnHome}/bin/mvn test"
     }
     
-    stage('Compile-Package'){
+    stage('Package'){
         def mvnHome = tool name: 'MAVEN_HOME', type: 'maven'
-        sh "${mvnHome}/bin/mvn deploy"
+        sh "${mvnHome}/bin/mvn package"
     }
     /*stage('Running Sonar Scanner'){
         def sonarqubeScannerHome = tool name: 'scan', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
