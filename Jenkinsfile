@@ -16,9 +16,5 @@ node{
         def mvnHome = tool name: 'M2_HOME', type: 'maven'
         sh "${mvnHome}/bin/mvn package"
     }
-    /*stage('Running Sonar Scanner'){
-        def sonarqubeScannerHome = tool name: 'scan', type: 'hudson.plugins.sonar.SonarRunnerInstallation'
-        sh "${sonarqubeScannerHome} -e -Dsonar.host.url=..."
-    }*/
    
 }
