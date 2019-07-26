@@ -19,7 +19,7 @@ public class AppTest {
 }
 */
 
-/*package com.workout;
+package com.workout;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -44,12 +44,12 @@ public void TestRun()
 	System.out.println("h ha ha");
 	driver.quit();
 }
-}*/
+}
 
 
 
 
-package com.workout;
+/*package com.workout;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -82,3 +82,4 @@ public void TestRun()
 	driver.quit();
 }
 }
+*/
